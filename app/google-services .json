@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "971693940216",
+    "firebase_url": "https://chat-app-c85fd.firebaseio.com",
+    "project_id": "chat-app-c85fd",
+    "storage_bucket": "chat-app-c85fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971693940216:android:4cfafd38f1f4fcef4f8a0d",
+        "android_client_info": {
+          "package_name": "com.sameer.flashchatnewfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971693940216-okfotal256gffh7dsgije1ed5m3jh15v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_rhFZPySsk-ppzg8WxAWogt01kZ7w8fA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971693940216-okfotal256gffh7dsgije1ed5m3jh15v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.londonappbrewery.flashchatnewfirebase"
+<manifest package="com.sameer.flashchatnewfirebase"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.sameer.flashchatnewfirebase.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" >
@@ -25,12 +25,12 @@
         </activity>
 
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.sameer.flashchatnewfirebase.RegisterActivity"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name=".MainChatActivity"
+            android:name="com.sameer.flashchatnewfirebase.MainChatActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize">
         </activity>
