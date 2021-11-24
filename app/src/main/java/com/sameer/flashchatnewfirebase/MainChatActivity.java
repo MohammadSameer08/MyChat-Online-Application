@@ -77,10 +77,8 @@ public class MainChatActivity extends AppCompatActivity {
         {
         InstanceMessage input=new InstanceMessage(message,mDisplayName);
         databaseReference.child("messages").push().setValue(input);
-
             mInputText.setText("");
         }
-
 
     }
 
@@ -89,17 +87,17 @@ public class MainChatActivity extends AppCompatActivity {
      public void onStart()
      {
          super.onStart();
-         Toast.makeText(this, "on start", Toast.LENGTH_SHORT).show();
+       //  Toast.makeText(this, "on start", Toast.LENGTH_SHORT).show();
          mAdapter=new ChatListAdapter(MainChatActivity.this,databaseReference,mDisplayName);
          mChatListView.setAdapter(mAdapter);
-
+ 
      }
 
 
     @Override
     public void onStop() {
         super.onStop();
- mAdapter.cleanUp();
+       mAdapter.cleanUp();
         // TODO: Remove the Firebase event listener on the adapter.
 
     }

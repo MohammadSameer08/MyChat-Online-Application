@@ -29,18 +29,20 @@ public class ChatListAdapter extends BaseAdapter {
     DatabaseReference mDatabaseReference;
     String mDisplayName;
     ArrayList<DataSnapshot> mSnapshotsList;
-    public ChildEventListener mListener = new ChildEventListener() {
+    public ChildEventListener mListener = new ChildEventListener()
+    {
         @Override
-        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-
+        public void onChildAdded(DataSnapshot dataSnapshot, String s)
+         {
             mSnapshotsList.add(dataSnapshot);
             notifyDataSetChanged();
-        }
+         }
 
-        @Override
-        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+          @Override
+          public void onChildChanged(DataSnapshot dataSnapshot, String s)
+          {
 
-        }
+          }
 
         @Override
         public void onChildRemoved(DataSnapshot dataSnapshot) {
@@ -58,7 +60,8 @@ public class ChatListAdapter extends BaseAdapter {
         }
     };
 
-    public ChatListAdapter(Activity activity, DatabaseReference ref, String name) {
+    public ChatListAdapter(Activity activity, DatabaseReference ref, String name)
+    {
 
         mActivity = activity;
         mDisplayName = name;
@@ -69,26 +72,25 @@ public class ChatListAdapter extends BaseAdapter {
 
 
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         return mSnapshotsList.size();
     }
 
     @Override
-    public InstanceMessage getItem(int i) {
+    public InstanceMessage getItem(int i)
+    {
         DataSnapshot snapshot = mSnapshotsList.get(i);
         return snapshot.getValue(InstanceMessage.class);
     }
 
     @Override
-    public long getItemId(int i) {
-        return 0;
-    }
+    public long getItemId(int i) {return 0;}
 
     static class ViewHolder {
         TextView authName;
         TextView body;
         LinearLayout.LayoutParams params;
-
 
     }
 
@@ -100,7 +102,7 @@ public class ChatListAdapter extends BaseAdapter {
             final ViewHolder holder = new ViewHolder();
             holder.authName = (TextView) view.findViewById(R.id.author);
             holder.body = (TextView) view.findViewById(R.id.message);
-            holder.params = (LinearLayout.LayoutParams) holder.authName.getLayoutParams();
+            holder.params = (LinearLayout.LayoutParams) holder.body.getLayoutParams();
             view.setTag(holder);
         }
 
@@ -112,7 +114,6 @@ public class ChatListAdapter extends BaseAdapter {
         ChatRow(itme, holder);
         String msg = message.getMessage();
         holder.body.setText(msg);
-
         return view;
 
 
@@ -120,15 +121,15 @@ public class ChatListAdapter extends BaseAdapter {
 
 
 
-    @SuppressLint("ResourceAsColor")
     public void ChatRow(boolean itsme, ViewHolder holder) {
         if (itsme) {
             holder.params.gravity = Gravity.END;
          //   holder.authName.setTextColor(holo_green_dark);
             holder.body.setBackgroundResource(R.drawable.bubble1);
-        } else {
+        } else
+            {
             holder.params.gravity = Gravity.START;
-          // holder.authName.setTextColor(holo_red_dark);
+            // holder.authName.setTextColor(holo_red_dark);
             holder.body.setBackgroundResource(R.drawable.bubble2);
         }
       holder.authName.setLayoutParams(holder.params);
