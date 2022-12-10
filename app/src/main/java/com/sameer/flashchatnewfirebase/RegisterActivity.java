@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mConfirmPasswordView;
 
     // Firebase instance variables
-  FirebaseAuth mFirebaseAuth;
+    FirebaseAuth mFirebaseAuth;
 
 
     @Override

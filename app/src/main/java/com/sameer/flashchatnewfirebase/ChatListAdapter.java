@@ -118,9 +118,6 @@ public class ChatListAdapter extends BaseAdapter {
 
 
     }
-
-
-
     public void ChatRow(boolean itsme, ViewHolder holder) {
         if (itsme) {
             holder.params.gravity = Gravity.END;
